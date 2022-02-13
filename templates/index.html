@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>My name is: {{first_name}}</p>
+    <p>{{ stuff|safe}}</p>
+    <p>{{stuff1|title}}</p>
+    <p>{{mytrim}}</p>
+    <h3>Favorit Pizza</h3>
+{% for fv in favorit_pizza %}
+      {{fv}}<br/>
+{% endfor%}
+<br/><br/>
+{{favorit_pizza.0}}
+<br/><br/>
+{{favorit_pizza.3 + 2}}
+<br/><br/>
+<p>with for loop</p>
+{% for f in favorit_pizza %}
+    {% if f ==41 %}
+         {{f + 7}}<br/>
+      {% else %}
+        {{f}}<br/>
+    {% endif%}
+{% endfor%}
+<br/><br/>
+{{favorit_pizza.0|reverse}}
+</body>
+</html>
